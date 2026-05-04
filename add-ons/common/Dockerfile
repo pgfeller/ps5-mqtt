@@ -16,7 +16,8 @@ RUN mkdir -p app
 COPY ./ps5-mqtt ./app
 
 RUN cd /app && \
-    npm install
+    npm install && \
+    npm run build
 
 # set permissions for both docker standalone and HA add-on startup scripts
 RUN chmod a+x /app/run.sh
